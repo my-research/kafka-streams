@@ -2,7 +2,7 @@ POST http://localhost:8080/publish
 Content-Type: application/json
 
 {
-  "topicName": "my-topic",
+  "topicName": "wordcount-output",
   "message": "Hello Kafka"
 }
 
@@ -12,5 +12,5 @@ Content-Type: application/json
 
 {
     "topicName": "wordcount-input",
-    "message": "안녕하세요 tree"
+    "message": "my father is jang hyunsik"
 }
