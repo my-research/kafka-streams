@@ -9,5 +9,5 @@ import org.springframework.kafka.annotation.EnableKafkaStreams
 class KafkaStreamsApplication
 
 fun main(args: Array<String>) {
-    runApplication<KafkaStreamsApplication>(*args)
+  runApplication<KafkaStreamsApplication>(*args)
 }

@@ -1,0 +1,11 @@
+# 최상위 설정 파일임을 명시
+root = true
+
+# 모든 파일에 대한 기본 설정
+[*]
+indent_style = space
+indent_size = 4
+
+# Kotlin 파일에 대한 설정 (*.kt와 *.kts 모두 적용하려면 아래와 같이 작성)
+[*.{kt,kts}]
+indent_size = 2
