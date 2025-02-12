@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: try-kafka-streams
+  kafka:
+    bootstrap-servers: localhost:9092
+    streams.application-id: try-kafka-streams-app
