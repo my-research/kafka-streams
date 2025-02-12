@@ -1,14 +1,21 @@
-DOCKER_COMPOSE = docker-compose
-DOCKER_DIR = ./docker/
-COMPOSE_FILES = -f $(DOCKER_DIR)docker-compose.yaml -f $(DOCKER_DIR)docker-compose-kafka-ui.yaml
+.PHONY: up down stop rm logs
 
+# 백그라운드에서 모든 컨테이너 실행
 up:
-	$(DOCKER_COMPOSE) $(COMPOSE_FILES) up -d
+	docker-compose up -d
 
+# 모든 컨테이너 중지 및 네트워크 제거
 down:
-	$(DOCKER_COMPOSE) $(COMPOSE_FILES) down
+	docker-compose down
 
-ps:
-	$(DOCKER_COMPOSE) $(COMPOSE_FILES) ps
+# 실행 중인 컨테이너만 중지
+stop:
+	docker-compose stop
 
-.PHONY: up down ps
+# 중지된 컨테이너를 강제로 삭제
+rm:
+	docker-compose rm -f
+
+# 모든 컨테이너 로그를 실시간으로 확인 (선택사항)
+logs:
+	docker-compose logs -f
